@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: psl
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: psl
+  template:
+    metadata:
+      labels:
+        app: psl
+    spec:
+      containers:
+        - name: psl
+          image: ghcr.io/rintintingoesbrrr/dockerapp:sha-3bc39d3
+          ports:
+            - containerPort: 8000
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: psl
+spec:
+  type: LoadBalancer
+  selector:
+    app: psl
+  ports:
+    - port: 80
+      targetPort: 8000
