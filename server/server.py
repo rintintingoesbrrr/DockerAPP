@@ -100,7 +100,7 @@ def health():
             <div class="status-row"><span class="label">Status</span><span class="status-ok">HEALTHY</span></div>
             <div class="status-row"><span class="label">Timestamp</span><span class="value">{timestamp}</span></div>
             <div class="status-row"><span class="label">Ready</span><span class="status-ok">True</span></div>
-            <div class="status-row"><span class="label">Live</span><span class="status-ok">True</span></div>
+            <div class="status-row"><span class="label">App is up and running</span><span class="status-ok">True</span></div>
         </div>
     </body>
     </html>
